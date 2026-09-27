@@ -173,8 +173,27 @@ class T_RT_B_Git(unittest.TestCase):
         self.assertIn("head", i)
 
     def test_107_check_all_verweigert_fremde_wurzel(self):
-        """RT-B: --root ausserhalb der Sandbox darf dort NICHTS schreiben."""
-        fremd = Path(tempfile.mkdtemp(prefix="fremd_"))
+        """RT-B: --root ausserhalb der Sandbox darf dort NICHTS schreiben.
+
+        Der Pruefer definiert seine Sandbox als den Ordner UEBER dem Baum. Liegt der Baum
+        selbst in einem Temp-Ordner (etwa ein frischer Klon in TMPDIR), dann liegt der
+        Temp-Ordner INNERHALB dieser Sandbox — dort darf der Pruefer laut eigener Regel
+        schreiben, und der Test schluege falschen Alarm (gemessen 27.09.2026). Darum wird
+        ein Ort gesucht, der wirklich ausserhalb liegt; findet sich keiner, wird die Regel
+        als nicht pruefbar benannt statt sie faelschlich als bestanden zu verbuchen.
+        """
+        sandbox = Path(M).resolve().parent
+        fremd = None
+        for ort in (Path("/tmp"), Path("/var/tmp"), Path(tempfile.gettempdir())):
+            if not ort.is_dir():
+                continue
+            kandidat = Path(tempfile.mkdtemp(prefix="fremd_", dir=str(ort))).resolve()
+            if sandbox not in kandidat.parents:
+                fremd = kandidat
+                break
+            shutil.rmtree(kandidat, ignore_errors=True)
+        if fremd is None:
+            self.skipTest("kein Temp-Ort ausserhalb der Sandbox verfuegbar — Regel nicht pruefbar")
         try:
             x = subprocess.run([sys.executable, str(M / "70_AUTOMATION/validation/check_all.py"),
                                 "--root", str(fremd)], capture_output=True, text=True)
