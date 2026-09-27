@@ -405,9 +405,9 @@
    "@id": "README.md",
    "@type": "File",
    "name": "README.md",
-   "contentSize": 4295,
-   "sha256": "bd32d1c52bd834bc0e7a49bb3d63f29a4fee6dfe8acc0589d75b5926a3b4946a",
-   "dateModified": "2026-09-27T13:29:47+0200"
+   "contentSize": 7849,
+   "sha256": "245ae3676ffca7ac7b24f07301c3ca912368b989d74845142e638979a9d01f74",
+   "dateModified": "2026-09-27T14:07:15+0200"
   },
   {
    "@id": "ordner.sh",
