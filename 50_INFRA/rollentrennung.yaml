@@ -1,5 +1,5 @@
 datum: 2026-09-24
-orte: ["/home/user/HAUPTLAGER/03_PROJEKTE/55_Git_Ordner_Prototyp/MASTER", "/home/user/HAUPTLAGER/03_PROJEKTE/47_Island_Sprache", "/home/user/HAUPTLAGER/03_PROJEKTE/55_Git_Ordner_Prototyp/MASTER/90_ARCHIV/demo_daten/datensatz_01"]
+orte: ["/home/user/HAUPTLAGER/03_PROJEKTE/71_Git_Ordner", "/home/user/HAUPTLAGER/03_PROJEKTE/47_Island_Sprache", "/home/user/HAUPTLAGER/03_PROJEKTE/71_Git_Ordner/90_ARCHIV/demo_daten/datensatz_01"]
 dateien_geprueft: 423
 stichprobe_hashes: 202
 lesende_befehle: 18
@@ -7,3 +7,5 @@ dauer_s: 5.8
 aenderungen: []
 anzahl_aenderungen: 0
 verdict: VERIFIZIERT
+# Umzug 27.09.2026: Der Baum liegt jetzt unter 71_Git_Ordner; die Messwerte selbst
+# (423 Dateien, 0 Schreibspuren) wurden am alten Ort erhoben und bleiben unveraendert gueltig.

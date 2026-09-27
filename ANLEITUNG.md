@@ -1,13 +1,13 @@
 # Git-Ordner-Baum — Bedienung in einer Seite
 
-**Wo:** `~/HAUPTLAGER/03_PROJEKTE/55_Git_Ordner_Prototyp/MASTER`
+**Wo:** `~/HAUPTLAGER/03_PROJEKTE/71_Git_Ordner`
 **Was:** Ein Ordnerbaum mit festen Regeln, einem Katalog (was liegt wo), einem Suchindex
 und einem Prüfer, der jederzeit sagt, ob der Baum in Ordnung ist.
 
 ## Die vier Befehle
 
 ```bash
-cd ~/HAUPTLAGER/03_PROJEKTE/55_Git_Ordner_Prototyp/MASTER
+cd ~/HAUPTLAGER/03_PROJEKTE/71_Git_Ordner
 
 ./ordner.sh status            # Kurzer Zustand (Index vorhanden? frisch? Quellen komplett?)
 ./ordner.sh pruefen           # Vollprüfung: Katalog, Regeln, Secrets, Index, Git
@@ -98,7 +98,7 @@ Alle Suiten auf einmal prüfen: `bash 70_AUTOMATION/tests/alle_suiten.sh`
 ## Git-Wartung (etwa monatlich, von Hand)
 
 ```bash
-cd ~/HAUPTLAGER/03_PROJEKTE/55_Git_Ordner_Prototyp/MASTER
+cd ~/HAUPTLAGER/03_PROJEKTE/71_Git_Ordner
 git commit-graph write --reachable && git gc
 ```
 Macht das Repo kleiner und schneller (gemessen 23.09.2026: 1,7 MB → 544 KB). Kein Automatismus,
@@ -257,6 +257,12 @@ git add -A && git commit -m "Thema <name> angelegt"
 beruehrt genau VIER Dinge — den Katalog (`00_SYSTEM/manifest/repos.yaml`), die neue `STATUS.md`,
 `PRUEFSUMMEN_MASTER.txt` und `ro-crate-metadata.json`. Danach meldet die Kontrolle 0 Fehler.
 Nichts ausserhalb des Baums wird angefasst.
+
+**Merkblatt (eine Seite, zum Hinstellen):** `00_SYSTEM/MERKBLATT_NEUES_THEMA.md` — dort stehen
+dieselben Schritte in Kurzform. **Auslöser im Chat** („neues Thema …" / „neuer Ordner …") ruft genau
+diesen Weg auf: `neuesProjekt "<name>"` legt das Thema an, wendet die Vorlage an, zieht Selbstbeschreibung
+und Pruefsummen nach, prueft und committet. Der klassische Weg bleibt mit `--klassisch` bzw. mit einem
+ausdruecklichen Pfad erhalten (fuer Archiv-/System-/Temp-Ordner).
 
 ## Auf dem System installiert (27.09.2026)
 

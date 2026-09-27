@@ -1630,7 +1630,10 @@ def nur_scratch(p) -> Path:
         rp = Path(os.path.realpath(p))
     except OSError as ex:
         raise SandkastenVerletzt(f"Pfad nicht aufloesbar ({ex}): {p}") from ex
-    verboten = {sb, sb.parent, sb / "MASTER", Path(sb.anchor), Path.home()}
+    # NICHT den Namen des Baums raten (er hiess frueher MASTER und heisst seit dem Umzug
+    # 27.09.2026 anders): die Wurzel aus dieser Datei ableiten — dann zieht der Schutz mit.
+    _baum = Path(__file__).resolve().parents[2]
+    verboten = {sb, sb.parent, _baum, Path(sb.anchor), Path.home()}
     if rp in verboten:                       # nie die Sandbox/Baum/Eltern selbst
         raise SandkastenVerletzt(
             f"LOESCHEN VERWEIGERT — das ist keine Testwiese: {p} -> {rp}")
