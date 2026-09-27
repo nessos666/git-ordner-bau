@@ -42,8 +42,12 @@ def nur_sandkasten(p) -> Path:
 
 ERLAUBTE_STAENDE = ("OK", "WARNING", "ERROR", "CRITICAL")
 
-S = Path(__file__).resolve().parents[3]
-M = S / "MASTER"
+# Der Baum selbst — NAMENSUNabhaengig. Er hiess frueher MASTER, seit dem Umzug
+# 27.09.2026 liegt er als 71_Git_Ordner direkt unter 03_PROJEKTE. Frueher stand hier
+# parents[3] / "MASTER" — das ging nur auf, solange der Baum in einem Ordner dieses
+# Namens lag, und liess nach dem Umzug alle Waechter-Suiten scheitern.
+M = Path(__file__).resolve().parents[2]
+S = M.parent
 CHECK = M / "70_AUTOMATION/validation/check_all.py"
 HERZSCHLAG_MAX_H = 26
 QUITTUNG_MAX_TAGE = 7
