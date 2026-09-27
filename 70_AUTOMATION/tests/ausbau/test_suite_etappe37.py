@@ -27,6 +27,10 @@ class Rollen(unittest.TestCase):
         txt = f.read_text(encoding="utf-8")
         self.assertIn("verdict: VERIFIZIERT", txt)
         self.assertIn("anzahl_aenderungen: 0", txt)
+        # Schaerfung (27.09.2026): Vorher genuegte das Wort VERIFIZIERT — eine Messung eines
+        # FREMDEN Baums haette den Test ebenfalls bestanden. Jetzt muss sie diesen Baum nennen.
+        self.assertIn(str(M), txt,
+                      "die Messung nennt DIESEN Baum nicht — sie koennte von einem anderen stammen")
 
     def test_t2_ohne_messung_kein_erfundenes_ok(self):
         f = M / "50_INFRA/rollentrennung.yaml"; weg = f.with_suffix(".weg")

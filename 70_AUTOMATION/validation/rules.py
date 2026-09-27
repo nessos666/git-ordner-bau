@@ -609,8 +609,9 @@ def _blob_secret(ctx: Ctx, repo: Path, rel: str):
     # BLOCKER 3: die Probe liegt FEST in der Sandbox — der gepruefte Baum wird nie beschrieben.
     tmp = assert_write_inside_sandbox(SANDBOX / "tmp_probe/k2_blob_pruef.tmp")
     try:
-        if False:  # BLOCKER 3: die alte Bindung an ctx.root war der Ausbruch; jetzt feste Sandbox-Probe
-            return None
+        # BLOCKER 3: die Probe liegt FEST in der Sandbox — der gepruefte Baum wird nie
+        # beschrieben. Frueher hing sie an ctx.root; das war der Ausbruch. Der damalige
+        # Notausstieg (ein nie wahrer Zweig) ist am 27.09.2026 entfernt, die Begruendung bleibt.
         tmp.parent.mkdir(parents=True, exist_ok=True)
         tmp.write_bytes(roh)
         name, _ = scan_secrets(tmp)
@@ -1582,7 +1583,6 @@ def k2_bare_und_nicht_git(ctx: Ctx, repo: Path):
         if any(t in dn.parts for t in EXCLUDE_DIRS) or any(t in rel.parts for t in VERBOTENE_PFADTEILE):
             dateien = sum(len(f2) for _, _, f2 in os.walk(dn))
             z["ausgeschlossen"] += 1 + dateien
-            ab["git_bare"] if False else None
             dns[:] = []
             continue
         if ".git" in dns:
