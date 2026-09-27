@@ -30,13 +30,13 @@ if ! ( cd "$ZIEL/70_AUTOMATION/tests" && python3 -B make_fixtures.py ); then
   echo "WARNUNG: Selbsttest-Fixtures konnten nicht erzeugt werden (Meldung oben) — der Selbsttest meldet dann DEFEKT."
 fi
 git -C "$ZIEL" init -q
-git -C "$ZIEL" -c user.name='Git-Ordner-Bau' -c user.email='noreply@example.invalid' add -A --ignore-errors >/dev/null
+git -C "$ZIEL" -c user.name='David Miko' -c user.email='noreply@example.invalid' add -A --ignore-errors >/dev/null
 # Selbstbeschreibung + Pruefsummen in der richtigen Reihenfolge (erzeugt auch den Crate)
 ( cd "$ZIEL" && ./ordner.sh summen >/dev/null ) || { echo "FEHLER: summen im neuen Baum fehlgeschlagen."; exit 2; }
 # WICHTIG: Selbstbeschreibung UND Prüfsummenliste müssen mit in den Commit — sonst enthält der erste
 # Commit die geerbte Liste des Elternbaums und der neue Baum wäre sofort "schmutzig" (Blocker 09/2026).
 git -C "$ZIEL" add -A >/dev/null
-git -C "$ZIEL" -c user.name='Git-Ordner-Bau' -c user.email='noreply@example.invalid' commit -q -m "Neuer Git-Ordner-Baum '$NAME' aus Vorlage angelegt"
+git -C "$ZIEL" -c user.name='David Miko' -c user.email='noreply@example.invalid' commit -q -m "Neuer Git-Ordner-Baum '$NAME' aus Vorlage angelegt"
 # Selbstkontrolle: nach dem Anlegen darf nichts offen sein
 if [ -n "$(git -C "$ZIEL" status --porcelain)" ]; then
   echo "FEHLER: der neue Baum ist nach dem Anlegen nicht sauber:"; git -C "$ZIEL" status --short; exit 2

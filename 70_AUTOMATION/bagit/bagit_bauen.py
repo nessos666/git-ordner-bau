@@ -52,7 +52,7 @@ def bauen(quelle: Path, ziel: Path) -> int:
     (ziel / "bagit.txt").write_text(BAGIT, encoding="utf-8")
     (ziel / "manifest-sha256.txt").write_text("\n".join(zeilen) + "\n", encoding="utf-8")
     (ziel / "bag-info.txt").write_text(
-        f"Source-Organization: Git-Ordner-Baum (Git-Ordner-Bau)\nBagging-Date: {time.strftime('%Y-%m-%d')}\n"
+        f"Source-Organization: Git-Ordner-Baum (David Miko)\nBagging-Date: {time.strftime('%Y-%m-%d')}\n"
         f"Bag-Software-Agent: bagit_bauen.py\nPayload-Oxum: {bytes_}.{anzahl}\n"
         f"Quelle: {quelle}\n", encoding="utf-8")
     # tagmanifest: Prüfsummen ueber die METADATEN des Bags (sonst koennte jemand bag-info/manifest aendern)

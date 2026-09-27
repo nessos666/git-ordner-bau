@@ -2,6 +2,8 @@
 
 **Ein Ordnerbaum, der sich selbst beschreibt, sich selbst prüft und nichts anfasst, was ihm nicht gehört.**
 
+*Von David Miko.*
+
 ![Prüfung](https://img.shields.io/badge/Pruefung-0_Fehler-brightgreen)
 ![Suiten](https://img.shields.io/badge/Suiten-20_von_20-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3_%2B_PyYAML-blue)
