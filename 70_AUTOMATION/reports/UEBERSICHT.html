@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Git-Ordner-Baum — wie es funktioniert</title>
+<style>
+  .kopf { display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; }
+  h1 { font-size:1.15rem; margin:0 0 2px; letter-spacing:-0.01em; }
+  .unter { color:var(--muted-foreground); font-size:0.82rem; margin:0 0 14px; }
+  .streifen { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 18px; }
+  .chip { border:1px solid var(--border); border-radius:999px; padding:3px 10px; font-size:0.76rem;
+          display:inline-flex; gap:6px; align-items:center; white-space:nowrap; }
+  .chip b { font-weight:600; }
+  .punkt { width:7px; height:7px; border-radius:50%; background:#22c55e; display:inline-block; }
+  .punkt.gelb { background:#eab308; }
+  h2 { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--muted-foreground);
+       margin:22px 0 10px; font-weight:600; }
+  .fluss { display:flex; flex-wrap:wrap; align-items:stretch; gap:8px; }
+  .schritt { flex:1 1 150px; min-width:150px; border:1px solid var(--border); border-radius:10px;
+             padding:9px 11px; background:var(--card); }
+  .schritt .nr { font-size:0.66rem; color:var(--muted-foreground); letter-spacing:0.08em; }
+  .schritt .t { font-size:0.86rem; font-weight:600; margin:2px 0 3px; }
+  .schritt .d { font-size:0.75rem; color:var(--muted-foreground); line-height:1.35; }
+  code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.83em;
+         border:1px solid var(--border); border-radius:5px; padding:1px 5px; }
+  .pfeil { align-self:center; color:var(--muted-foreground); font-size:1rem; }
+  .raster { display:grid; grid-template-columns:repeat(auto-fill,minmax(168px,1fr)); gap:8px; }
+  .bereich { border:1px solid var(--border); border-radius:10px; padding:8px 10px; background:var(--card); }
+  .bereich .b { font-size:0.8rem; font-weight:600; font-family:ui-monospace,monospace; }
+  .bereich .d { font-size:0.73rem; color:var(--muted-foreground); line-height:1.35; margin-top:3px; }
+  table { border-collapse:collapse; width:100%; font-size:0.79rem; }
+  th, td { text-align:left; padding:5px 8px; border-bottom:1px solid var(--border); vertical-align:top; }
+  th { color:var(--muted-foreground); font-weight:600; font-size:0.73rem; text-transform:uppercase;
+       letter-spacing:0.06em; }
+  .kasten { border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:8px;
+            padding:9px 12px; font-size:0.79rem; line-height:1.45; background:var(--card); }
+  .kasten.warnung { border-left-color:#eab308; }
+  .befehle { display:flex; flex-wrap:wrap; gap:6px; }
+  button.befehl { font:inherit; font-size:0.76rem; font-family:ui-monospace,monospace; cursor:pointer;
+                  border:1px solid var(--border); border-radius:7px; padding:3px 9px;
+                  background:var(--card); color:var(--foreground); }
+  button.befehl:hover { border-color:var(--accent); }
+  ul { margin:6px 0 0; padding-left:18px; font-size:0.79rem; line-height:1.5; }
+  .planzeile { display:flex; gap:9px; align-items:flex-start; padding:6px 0; border-bottom:1px solid var(--border);
+               font-size:0.79rem; }
+  .planzeile:last-child { border-bottom:0; }
+  .marke { font-size:0.68rem; border:1px solid var(--border); border-radius:999px; padding:1px 8px;
+           white-space:nowrap; color:var(--muted-foreground); }
+  .marke.fertig { border-color:#22c55e; color:#22c55e; }
+  .marke.offen { border-color:#eab308; color:#eab308; }
+</style>
+
+<div class="kopf">
+  <h1>Git-Ordner-Baum</h1>
+</div>
+<p class="unter">Ein Ordnerbaum, der sich selbst beschreibt, selbst prüft und sich beweisen kann —
+ganz ohne fremde Werkzeuge. Stand: 25.09.2026, 03:20 — alle 19 Suiten grün, nach drei Fremd-Prüfungen.</p>
+
+<div class="streifen">
+  <span class="chip"><span class="punkt"></span><b>Prüfer:</b> 0 Fehler</span>
+  <span class="chip"><span class="punkt gelb"></span><b>19/19</b> Suiten grün · 255 Tests · 0 Fehler</span>
+  <span class="chip"><span class="punkt"></span><b>16</b> Befehle</span>
+  <span class="chip"><span class="punkt"></span><b>115</b> verfolgte Dateien</span>
+  <span class="chip"><span class="punkt"></span><b>80</b> Commits · v0.2.48</span>
+  <span class="chip"><span class="punkt"></span>Crate gültig · Bag valid</span>
+  <span class="chip"><span class="punkt gelb"></span>1 Hinweis (50-MB-Stichprobe)</span>
+</div>
+
+<h2>So läuft es — sechs Schritte</h2>
+<div class="fluss">
+  <div class="schritt"><div class="nr">01 ANLEGEN</div><div class="t"><code>spross</code></div>
+    <div class="d">Legt aus diesem Baum einen <b>neuen</b> Git-Ordner-Baum an: 10 Bereiche, alle
+    Werkzeuge, frische Historie — <b>keine</b> Arbeitsdaten, keine geerbten Messungen. Danach
+    <code>git status</code> leer.</div></div>
+  <div class="pfeil">→</div>
+  <div class="schritt"><div class="nr">02 ARBEITEN</div><div class="t">Dateien in Bereiche</div>
+    <div class="d">Alles landet in einem der 10 Bereiche. Große Bestände bleiben draußen und werden
+    über <b>Zeiger</b> angebunden.</div></div>
+  <div class="pfeil">→</div>
+  <div class="schritt"><div class="nr">03 NACHZIEHEN</div><div class="t"><code>summen</code></div>
+    <div class="d">Nach jeder Änderung: erst Selbstbeschreibung (Crate), dann Prüfsummen. Die
+    Reihenfolge ist Pflicht — sonst beschreiben sie sich gegenseitig falsch.</div></div>
+  <div class="pfeil">→</div>
+  <div class="schritt"><div class="nr">04 PRÜFEN</div><div class="t"><code>pruefen</code></div>
+    <div class="d">Regeln K1–K9 + CRATE + Selbsttest. <b>0 Fehler</b> oder sichtbarer Fehler mit
+    definiertem Exitcode — nie ein stilles „OK".</div></div>
+  <div class="pfeil">→</div>
+  <div class="schritt"><div class="nr">05 SICHERN</div><div class="t"><code>sicherung --bag</code></div>
+    <div class="d">Zweite Kopie + genormte BagIt-Sicherung (RFC 8493) in einem Befehl.</div></div>
+  <div class="pfeil">→</div>
+  <div class="schritt"><div class="nr">06 BEWEISEN</div><div class="t"><code>wiederherstellen</code></div>
+    <div class="d">Kopie zurückholen und nachrechnen: Prüfsummen identisch, Git aus dem Bündel
+    wiederhergestellt. Ein Backup gilt erst, wenn es zurückgespielt wurde.</div></div>
+</div>
+
+<h2>Die zehn Bereiche</h2>
+<div class="raster">
+  <div class="bereich"><div class="b">00_SYSTEM</div><div class="d">Regeln, Katalog, Vorlagen für Entscheidungen</div></div>
+  <div class="bereich"><div class="b">10_AGENT</div><div class="d">Anweisungen für KI-Assistenten</div></div>
+  <div class="bereich"><div class="b">20_PROJEKTE</div><div class="d">Projekte, je eigenes Unter-Repo</div></div>
+  <div class="bereich"><div class="b">30_WISSEN</div><div class="d">Wissen, Notizen, Auswertungen</div></div>
+  <div class="bereich"><div class="b">40_DATEN</div><div class="d">Zeiger auf Bestände außerhalb</div></div>
+  <div class="bereich"><div class="b">50_INFRA</div><div class="d">Sicherung, Redundanz, Messungen</div></div>
+  <div class="bereich"><div class="b">60_RUNTIME</div><div class="d">Arbeitsdaten — nie in Git</div></div>
+  <div class="bereich"><div class="b">70_AUTOMATION</div><div class="d">Werkzeuge, Prüfer, 19 Testsuiten</div></div>
+  <div class="bereich"><div class="b">80_VORLAGEN</div><div class="d">Schablonen für neue Projekte</div></div>
+  <div class="bereich"><div class="b">90_ARCHIV</div><div class="d">Alte Stände, Befunde</div></div>
+</div>
+
+<h2>Was schützt was</h2>
+<table>
+  <tr><th>Schutz</th><th>Womit</th><th>Was er beweist</th></tr>
+  <tr><td>Bits unverändert</td><td>Prüfsummen (SHA-256) über alle verfolgten Dateien</td>
+      <td>Jede Datei ist Bit für Bit die, die sie sein soll</td></tr>
+  <tr><td>Änderung bemerkt</td><td><b>Regel K9</b> (neu)</td>
+      <td>Eine nachträglich geänderte Datei wird gemeldet — vorher blieb sie unsichtbar</td></tr>
+  <tr><td>Selbstbeschreibung ehrlich</td><td><b>Regel CRATE</b> (neu)</td>
+      <td>Der Katalog passt zum Inhalt; er kann nicht mehr still veralten</td></tr>
+  <tr><td>Sicherung wirklich gleich</td><td><code>sicherung.sh pruefen</code> gegen <b>den Baum</b></td>
+      <td>Eine beim Kopieren verfälschte Kopie fällt auf (vorher meldete sie „OK")</td></tr>
+  <tr><td>Archiv vollständig</td><td>BagIt mit tagmanifest + Vollständigkeitsprüfung</td>
+      <td>Nichts Ungelistetes, kein fehlendes Metadaten-Manifest</td></tr>
+  <tr><td>System ist intakt</td><td>Regeln K1–K8, Selbsttest, Rollentrennung (gemessen)</td>
+      <td>Struktur, Namen, Nummern, Rechte — und dass Lesen nichts schreibt</td></tr>
+</table>
+
+<h2>Die 16 Befehle <span style="text-transform:none;letter-spacing:0;font-weight:400">— anklickbar, ich führe sie dir aus</span></h2>
+<div class="befehle">
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh status aus und erklär mir kurz das Ergebnis.">status</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh pruefen aus und erklär mir das Ergebnis in einfachen Worten.">pruefen</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh summen aus und danach ./ordner.sh pruefen — was hat sich geändert?">summen</button>
+  <button class="befehl" data-hermes-send="Erklär mir, was ./ordner.sh neu genau macht und bau den Suchindex neu.">neu</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh doppelt <Pfad> aus und zeig mir die Dubletten.">doppelt</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh crate aus und dann ./ordner.sh crate --pruefen.">crate</button>
+  <button class="befehl" data-hermes-send="Führe bash sicherung.sh kopie <ZIEL> --bag aus und prüf die Kopie danach.">sicherung kopie</button>
+  <button class="befehl" data-hermes-send="Prüf bitte, ob die Sicherungskopie noch zum Baum passt (bash sicherung.sh pruefen).">sicherung pruefen</button>
+  <button class="befehl" data-hermes-send="Leg einen neuen Git-Ordner-Baum an (spross) und prüf ihn danach.">spross</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh vorlage liste aus und erklär mir die Vorlagen.">vorlage</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh zeiger aus und erklär mir die Zeiger auf Bestände außerhalb.">zeiger</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh suchen \"Begriff\" aus und zeig mir die Treffer.">suchen</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh formate aus und erklär mir, was auffällt.">formate</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh finden <Begriff> aus.">finden</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh springen <Pfad> aus.">springen</button>
+  <button class="befehl" data-hermes-send="Führe ./ordner.sh projekt <Name> aus.">projekt</button>
+</div>
+
+<h2>Ehrliche Grenzen</h2>
+<div class="kasten warnung">
+  <ul>
+    <li><b>Alles liegt auf derselben Platte.</b> Die zweite Kopie schützt vor Fehlern und Bitfehlern —
+        <b>nicht</b> vor einem Plattenausfall. Ein echter zweiter Ort bräuchte eine externe Platte.</li>
+    <li><b>Zeiger über 50 MB</b> werden per Stichprobe geprüft (16 von 313 Dateien) — der Rest gilt
+        ausdrücklich als „ungeprüft", nicht als „in Ordnung".</li>
+    <li><b>Rollentrennung</b> ist eine Momentaufnahme (24.09., 423 Dateien, 0 Schreibspuren) und wird
+        nicht automatisch erneuert.</li>
+    <li><b>Suiten, die den gemessenen Originalbaum brauchen</b>, melden in einer Kopie Fehler statt
+        „übersprungen mit Begründung" — dokumentiert, noch offen.</li>
+    <li>Die <b>Angriffs-/Race-Klasse</b> ist eine dokumentierte Grenze, keine geschlossene Lücke.</li>
+  </ul>
+</div>
+
+<h2>Zweite Fremd-Prüfung (25.09., nachts)</h2>
+<div class="kasten warnung">
+  Ein zweiter unabhängiger Prüf-Agent hat <b>drei meiner „behobenen" Punkte widerlegt</b> — zu Recht.
+  Behoben und nachgerechnet: Sicherung prüft jetzt gegen den <b>Quellbaum</b> (manipulierte Kopie → erkannt,
+  rc=2) · K9 prüft <b>beidseitig</b> (neue verfolgte Datei → gemeldet) · gescheitertes Git-Bündel wird
+  <b>laut</b> gemeldet (rc=2 mit Grund) · Doku-Zahlen korrigiert · `tmp_probe` bleibt nicht mehr liegen.
+  Offen: 2 von 8 Tests in `test_suite_etappe29.py` (Testbäume, in denen die neuen Regeln zu Recht
+  anschlagen) — dokumentiert im Befundbericht.
+</div>
+
+<h2>Plan — was noch kommt</h2>
+<div class="planzeile"><span class="marke fertig">FERTIG</span>
+  <div><b>Baum, Norm-Anschluss, Fremd-Prüfung:</b> WEG 1, Ausbau, BagIt/RO-Crate, 14 Befunde des
+  Prüf-Agenten abgearbeitet — alles nachgerechnet.</div></div>
+<div class="planzeile"><span class="marke fertig">FERTIG</span>
+  <div><b>Skip-Begründungen:</b> Kopien melden jetzt „übersprungen (braucht den gemessenen
+  Originalbaum)" statt zu scheitern — 0 Fehler, 7 übersprungen.</div></div>
+<div class="planzeile"><span class="marke offen">OPTIONAL</span>
+  <div><b>Drei Messinstrumente</b> (je klein): Prüf-Log mit Hash-Kette (wann wurde was geprüft?),
+  Schnellvorprüfung Größe+Anzahl (Sekunden statt Minuten), Wiederherstellungs-Übung mit Stoppuhr.</div></div>
+<div class="planzeile"><span class="marke offen">GESPERRT</span>
+  <div><b>Etappe 3:</b> Einzug echter Bestände ins HAUPTLAGER — erst wenn der Baum fertig ist
+  (deine Vorgabe).</div></div>

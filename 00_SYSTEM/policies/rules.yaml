@@ -1,0 +1,35 @@
+# Pruefregeln v1.3 — Kennung, Beschreibung, Schwere, Meldung
+schema_version: 1
+regeln:
+  - id: K1
+    titel: Keine verbotenen Inhalte in Git
+    schwere: ERROR            # > 100 MB -> CRITICAL
+    meldung: "Verbotener Inhalt im Repository (Groesse/Ordner/Dateityp). Git ist kein Massenspeicher."
+  - id: K2
+    titel: Kein Secret in Git
+    schwere: CRITICAL
+    meldung: "Secret-Muster gefunden. PFLICHTREAKTION: (1) als kompromittiert behandeln, (2) SOFORT rotieren/widerrufen, (3) Auswirkungen pruefen, (4) History nur ZUSAETZLICH bereinigen, (5) Forks/Klone koennen die alten Werte weiterhin besitzen."
+  - id: K3
+    titel: Pflichtdateien je Klasse
+    schwere: ERROR
+    meldung: "Pflichtdatei fehlt (README/.gitignore/STATUS/Herkunftskopf)."
+  - id: K4
+    titel: Katalog <-> Realitaet, bidirektional
+    schwere: ERROR            # fehlender Pfad -> CRITICAL
+    meldung: "Katalog und Realitaet widersprechen sich. Wird gemeldet, NIE automatisch repariert."
+  - id: K5
+    titel: Katalogzeile vollstaendig und Status gueltig
+    schwere: ERROR
+    meldung: "Katalogzeile unvollstaendig/ungueltig (Pflichtfeld, Status, Eindeutigkeit)."
+  - id: K6
+    titel: Namen und Pfade
+    schwere: WARNING          # > 255 Zeichen oder Case-Kollision -> ERROR
+    meldung: "Namens-/Pfadregel verletzt (Laenge, Zeichsatz, Datum, Case-Kollision)."
+  - id: K7
+    titel: Tiefe und Breite
+    schwere: WARNING          # ab 6 Ebenen bzw. 21 Eintraegen -> ERROR
+    meldung: "Topologie verletzt (Tiefe <= 5 ab MASTER-Wurzel, Breite <= 20)."
+  - id: K8
+    titel: Externe Objekte haben eine Pruefsumme
+    schwere: ERROR
+    meldung: "Zeiger/Datensatz ohne Pruefsumme (Objekt > 10 MB) oder 40_DATEN zu gross."

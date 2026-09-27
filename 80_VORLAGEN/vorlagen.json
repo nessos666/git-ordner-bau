@@ -1,0 +1,38 @@
+{
+ "standard": {
+  "beschreibung": "Allgemeines Projekt",
+  "ordner": [
+   "01_Eingang",
+   "02_Arbeit",
+   "03_Ergebnisse",
+   "04_Archiv"
+  ]
+ },
+ "forschung": {
+  "beschreibung": "Recherche/Studien",
+  "ordner": [
+   "01_Quellen",
+   "02_Auswertung",
+   "03_Dossier",
+   "04_Archiv"
+  ]
+ },
+ "handwerk": {
+  "beschreibung": "Handwerk/Angebot",
+  "ordner": [
+   "01_Anfrage",
+   "02_Angebot",
+   "03_Ausfuehrung",
+   "04_Abschluss"
+  ]
+ },
+ "trading": {
+  "beschreibung": "Trading/Backtest",
+  "ordner": [
+   "01_Daten",
+   "02_Analyse",
+   "03_Setups",
+   "04_Archiv"
+  ]
+ }
+}

@@ -1,0 +1,17 @@
+schema_version: 1
+# Erklaerte zweite Kopien des Baums (Ausbau-Schritt 2, 23.09.2026).
+#
+# Der Pruefer MISST bei jedem Lauf, ob jede hier erklaerte Kopie
+#   1) existiert,
+#   2) AKTUELL ist (ihre Pruefsummenliste stimmt mit dem Baum ueberein) und
+#   3) auf einem ANDEREN Geraet liegt (st_dev).
+# Gleiche Platte wird ausdruecklich benannt: sie schuetzt vor Fehlern (versehentlich
+# geloescht/ueberschrieben), NICHT vor dem Ausfall der Platte. Das ist P0.
+#
+# Erzeugen/Erneuern einer Kopie:  ./sicherung.sh kopie ~/sicherung_git_ordner
+
+kopien:
+  - pfad: ~/sicherung_git_ordner_20260927
+    typ: zweite Kopie auf derselben Platte
+    angelegt: 2026-09-27
+    hinweis: "schuetzt vor Fehlern, nicht vor Plattenausfall (P0 offen); aeltere Kopien ~/sicherung_git_ordner und ~/sicherung_git_ordner_bag liegen noch daneben"

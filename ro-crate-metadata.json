@@ -1,0 +1,1285 @@
+{
+ "@context": "https://w3id.org/ro/crate/1.1/context",
+ "@graph": [
+  {
+   "@id": "ro-crate-metadata.json",
+   "@type": "CreativeWork",
+   "about": {
+    "@id": "./"
+   },
+   "conformsTo": {
+    "@id": "https://w3id.org/ro/crate/1.1"
+   },
+   "description": "RO-Crate Metadaten fuer git-ordner-bau"
+  },
+  {
+   "@id": "./",
+   "@type": "Dataset",
+   "name": "git-ordner-bau",
+   "description": "",
+   "datePublished": "2026-09-27",
+   "conformsTo": {
+    "@id": "https://w3id.org/ro/crate/1.1"
+   },
+   "license": {
+    "@id": "https://spdx.org/licenses/CC-BY-4.0"
+   },
+   "hasPart": [
+    {
+     "@id": ".gitignore"
+    },
+    {
+     "@id": "ANLEITUNG.md"
+    },
+    {
+     "@id": "KURZFASSUNG.md"
+    },
+    {
+     "@id": "PROTOKOLL.md"
+    },
+    {
+     "@id": "README.md"
+    },
+    {
+     "@id": "ordner.sh"
+    },
+    {
+     "@id": "sicherung.sh"
+    },
+    {
+     "@id": "spross.sh"
+    },
+    {
+     "@id": "10_AGENT/README.md"
+    },
+    {
+     "@id": "40_DATEN/README.md"
+    },
+    {
+     "@id": "40_DATEN/manifests/datensatz_01_manifest_liste.txt"
+    },
+    {
+     "@id": "40_DATEN/checksums/sha256.txt"
+    },
+    {
+     "@id": "30_WISSEN/dossiers/2026-09-21_dossier/README.md"
+    },
+    {
+     "@id": "30_WISSEN/references/README.md"
+    },
+    {
+     "@id": "90_ARCHIV/README.md"
+    },
+    {
+     "@id": "90_ARCHIV/demo_daten/datensatz_01/daten.txt"
+    },
+    {
+     "@id": "90_ARCHIV/demo_daten/datensatz_01/manifest.yaml"
+    },
+    {
+     "@id": "90_ARCHIV/befunde/C_TESTLAUF_BEFUND.md"
+    },
+    {
+     "@id": "90_ARCHIV/2026_altprojekt/.gitignore"
+    },
+    {
+     "@id": "90_ARCHIV/2026_altprojekt/README.md"
+    },
+    {
+     "@id": "90_ARCHIV/2026_altprojekt/STATUS.md"
+    },
+    {
+     "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/.gitignore"
+    },
+    {
+     "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/README.md"
+    },
+    {
+     "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/STATUS.md"
+    },
+    {
+     "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/01_input/notiz.md"
+    },
+    {
+     "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/03_output/ergebnis.md"
+    },
+    {
+     "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/02_work/arbeit.md"
+    },
+    {
+     "@id": "20_PROJEKTE/domains/recherche/2026-09-21_fremd_bibliothek/.gitignore"
+    },
+    {
+     "@id": "20_PROJEKTE/domains/recherche/2026-09-21_fremd_bibliothek/README.md"
+    },
+    {
+     "@id": "20_PROJEKTE/standalone/2026-09-21_frisch/README.md"
+    },
+    {
+     "@id": "20_PROJEKTE/standalone/2026-09-21_frisch/01_input/x.md"
+    },
+    {
+     "@id": "00_SYSTEM/.gitignore"
+    },
+    {
+     "@id": "00_SYSTEM/README.md"
+    },
+    {
+     "@id": "00_SYSTEM/UEBERNAHME.md"
+    },
+    {
+     "@id": "00_SYSTEM/policies/rules.yaml"
+    },
+    {
+     "@id": "00_SYSTEM/manifest/repos.yaml"
+    },
+    {
+     "@id": "00_SYSTEM/provenance/vorlage.yaml"
+    },
+    {
+     "@id": "00_SYSTEM/design/CHANGELOG_DESIGN.md"
+    },
+    {
+     "@id": "00_SYSTEM/design/LIESMICH.md"
+    },
+    {
+     "@id": "00_SYSTEM/design/MASTER_DESIGN_v1.3.md"
+    },
+    {
+     "@id": "00_SYSTEM/design/RED_TEAM_v1.1.md"
+    },
+    {
+     "@id": "00_SYSTEM/design/RED_TEAM_v1.3.md"
+    },
+    {
+     "@id": "00_SYSTEM/schemas/repos.schema.json"
+    },
+    {
+     "@id": "80_VORLAGEN/README.md"
+    },
+    {
+     "@id": "80_VORLAGEN/vorlagen.json"
+    },
+    {
+     "@id": "50_INFRA/README.md"
+    },
+    {
+     "@id": "50_INFRA/RECHERCHE_AEHNLICHE_PROJEKTE.md"
+    },
+    {
+     "@id": "50_INFRA/RECOLL_ANLEITUNG.md"
+    },
+    {
+     "@id": "50_INFRA/redundanz.yaml"
+    },
+    {
+     "@id": "50_INFRA/rollentrennung.yaml"
+    },
+    {
+     "@id": "50_INFRA/nodes/knoten-01.yaml"
+    },
+    {
+     "@id": "70_AUTOMATION/.gitignore"
+    },
+    {
+     "@id": "70_AUTOMATION/README.md"
+    },
+    {
+     "@id": "70_AUTOMATION/projects/katalog_bereinigen.py"
+    },
+    {
+     "@id": "70_AUTOMATION/projects/neues_projekt.py"
+    },
+    {
+     "@id": "70_AUTOMATION/projects/vorlage_anwenden.py"
+    },
+    {
+     "@id": "70_AUTOMATION/bagit/bagit_bauen.py"
+    },
+    {
+     "@id": "70_AUTOMATION/crate/liste_aus_crate.py"
+    },
+    {
+     "@id": "70_AUTOMATION/crate/ro_crate.py"
+    },
+    {
+     "@id": "70_AUTOMATION/indexing/README.md"
+    },
+    {
+     "@id": "70_AUTOMATION/indexing/indexer.py"
+    },
+    {
+     "@id": "70_AUTOMATION/cross-repo/adapter_readonly.py"
+    },
+    {
+     "@id": "70_AUTOMATION/validation/README.md"
+    },
+    {
+     "@id": "70_AUTOMATION/validation/REVIEW.md"
+    },
+    {
+     "@id": "70_AUTOMATION/validation/budget.py"
+    },
+    {
+     "@id": "70_AUTOMATION/validation/check_all.py"
+    },
+    {
+     "@id": "70_AUTOMATION/validation/formate_pruefen.py"
+    },
+    {
+     "@id": "70_AUTOMATION/validation/rollentrennung_messen.py"
+    },
+    {
+     "@id": "70_AUTOMATION/validation/rules.py"
+    },
+    {
+     "@id": "70_AUTOMATION/validation/schema_check.py"
+    },
+    {
+     "@id": "70_AUTOMATION/maintenance/status_sim.py"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/ABSCHLUSSBERICHT.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/ABSCHLUSSBERICHT_AUSBAU.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/BAUPLAN_AUSBAU.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/BAUPLAN_WEG1.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/BEFUNDE_FREMDPruefung_2026-09-25.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/ETAPPE2_BERICHT.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/FORTSCHRITT.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/METADATEN_SCHICHTEN.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/RECHERCHE_VERBESSERUNGEN_2026-09-24.md"
+    },
+    {
+     "@id": "70_AUTOMATION/reports/UEBERSICHT.html"
+    },
+    {
+     "@id": "70_AUTOMATION/pointers/doppelte.py"
+    },
+    {
+     "@id": "70_AUTOMATION/pointers/finden.py"
+    },
+    {
+     "@id": "70_AUTOMATION/pointers/suchen_namen.py"
+    },
+    {
+     "@id": "70_AUTOMATION/pointers/zeiger_bauen.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/REF_ZERO"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/alle_suiten.sh"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/braucht_originalbaum.txt"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/lastgrenzen.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/make_fixtures.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/redteam.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/run_tests.sh"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/sicherheitstest.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/skala.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe29.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe30.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe31.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe32.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe33.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe34.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe35.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe36.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe37.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe38.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe39.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe40.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/weg1/test_suite.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/weg1/test_suite_etappe2.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/weg1/test_suite_etappe25.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/weg1/test_suite_etappe26.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/weg1/test_suite_etappe28.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/weg1/test_suite_finalabnahme.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/weg1/test_suite_gegenprobe25.py"
+    },
+    {
+     "@id": "70_AUTOMATION/tests/weg1/test_suite_unabhaengig.py"
+    }
+   ]
+  },
+  {
+   "@id": ".gitignore",
+   "@type": "File",
+   "name": ".gitignore",
+   "contentSize": 128,
+   "sha256": "b53fda9d1aad35ac29899f925f1cf5e2346ea6239aa55afd28fd67189d3c0b5f",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "ANLEITUNG.md",
+   "@type": "File",
+   "name": "ANLEITUNG.md",
+   "contentSize": 13717,
+   "sha256": "d9a0ddc46230a7e4d4e9948c9453df1ad3d9c9f91ed6d1dc32e9f71fc1a50af2",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "KURZFASSUNG.md",
+   "@type": "File",
+   "name": "KURZFASSUNG.md",
+   "contentSize": 3170,
+   "sha256": "55a73093fe4c072916699b6a0f66a9bd308a2cf508050d55666508b18ee9fe82",
+   "dateModified": "2026-09-27T13:57:34+0200"
+  },
+  {
+   "@id": "PROTOKOLL.md",
+   "@type": "File",
+   "name": "PROTOKOLL.md",
+   "contentSize": 6648,
+   "sha256": "c71e926ea107544abc459353a8776caf53a9aed53ef9c7373a3f01c6e258bc5d",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 4295,
+   "sha256": "bd32d1c52bd834bc0e7a49bb3d63f29a4fee6dfe8acc0589d75b5926a3b4946a",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "ordner.sh",
+   "@type": "File",
+   "name": "ordner.sh",
+   "contentSize": 8234,
+   "sha256": "eec288c6f2559c70e32b8ba9d5b4b76ac5e20f4486d920e2f1660c06802f6edc",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "sicherung.sh",
+   "@type": "File",
+   "name": "sicherung.sh",
+   "contentSize": 5681,
+   "sha256": "bb9b44e9706028e285fb40df7e193ca20187e4ef013437f91407f2aee6b7f132",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "spross.sh",
+   "@type": "File",
+   "name": "spross.sh",
+   "contentSize": 3500,
+   "sha256": "0ba916076979e7e56ad74952b9b3a03eef3d410336e477f444fbdaecc06790c6",
+   "dateModified": "2026-09-27T13:54:57+0200"
+  },
+  {
+   "@id": "10_AGENT/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 173,
+   "sha256": "d2dfc13bd57fe6bd45d5ed9ae287e4ac7d72bb6cc3949adefd7dbf2f00ffb600",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "40_DATEN/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 108,
+   "sha256": "ec7eca26d10bec7c75293bf61426c7dddd18b30fd5b0589326956ae7ab3090de",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "40_DATEN/manifests/datensatz_01_manifest_liste.txt",
+   "@type": "File",
+   "name": "datensatz_01_manifest_liste.txt",
+   "contentSize": 156,
+   "sha256": "44e1ff34861116fdcf8da56cc55f5f0c41e6485db5ac1311bfe3a7270076d6e7",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "40_DATEN/checksums/sha256.txt",
+   "@type": "File",
+   "name": "sha256.txt",
+   "contentSize": 178,
+   "sha256": "831d0c5c61750d337f9b53432054a2b1f0c4561bdb88a938e2f911067c1acd19",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "30_WISSEN/dossiers/2026-09-21_dossier/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 326,
+   "sha256": "1631bc16e50078ce558cb607dee0853d3497c6c2bea05af16df9e6d650e7669d",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "30_WISSEN/references/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 33,
+   "sha256": "60cfae1504a9c9c4259274053012b42f584c731a5fdfeef94d1a5b957443a010",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "90_ARCHIV/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 34,
+   "sha256": "af332a2ae8c48c4e4f7b4e45a4e934d195a89e938f7e9128f45766559bc6bfa4",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "90_ARCHIV/demo_daten/datensatz_01/daten.txt",
+   "@type": "File",
+   "name": "daten.txt",
+   "contentSize": 1440,
+   "sha256": "41c70b59978a7efb788435c6b9d3dd684bb50415c6c3eb7e262f437cff71ed6c",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "90_ARCHIV/demo_daten/datensatz_01/manifest.yaml",
+   "@type": "File",
+   "name": "manifest.yaml",
+   "contentSize": 60,
+   "sha256": "bc613fec19900e302b0433d655318e848b50aaee8e8e5df8d8ed1f6c62b9b4c6",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "90_ARCHIV/befunde/C_TESTLAUF_BEFUND.md",
+   "@type": "File",
+   "name": "C_TESTLAUF_BEFUND.md",
+   "contentSize": 3392,
+   "sha256": "a976266f8d62cce1e5267c068ef5c66afc6dd34e2a16b3e5335b1e1b79c76935",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "90_ARCHIV/2026_altprojekt/.gitignore",
+   "@type": "File",
+   "name": ".gitignore",
+   "contentSize": 146,
+   "sha256": "e081b48275de0ae862c4a973f10b5c897ed2e24dd08d807bdaaea6f8e20004d7",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "90_ARCHIV/2026_altprojekt/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 49,
+   "sha256": "6635b51f4629aaa2aab971e54ea3ce57ff4aa3b6866930c4959c23e2db2ecbdc",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "90_ARCHIV/2026_altprojekt/STATUS.md",
+   "@type": "File",
+   "name": "STATUS.md",
+   "contentSize": 17,
+   "sha256": "f11f74027cf1687db553f20919986a59892cc31ee6e4cd348ae270101270d246",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/.gitignore",
+   "@type": "File",
+   "name": ".gitignore",
+   "contentSize": 146,
+   "sha256": "e081b48275de0ae862c4a973f10b5c897ed2e24dd08d807bdaaea6f8e20004d7",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 94,
+   "sha256": "e11b4d8a3d9ab83d5a27833ba699e62354dbd259094c78ef9082c3b2def05dc9",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/STATUS.md",
+   "@type": "File",
+   "name": "STATUS.md",
+   "contentSize": 49,
+   "sha256": "d20ca3bc7f4b16874babff4a90986a88c851892c33537ef250d00ebe71eb711b",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/01_input/notiz.md",
+   "@type": "File",
+   "name": "notiz.md",
+   "contentSize": 13,
+   "sha256": "9d0c66a04c7e4825022799d24a69f85b224683b378bf7f196d1f20b5ed68b9b5",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/03_output/ergebnis.md",
+   "@type": "File",
+   "name": "ergebnis.md",
+   "contentSize": 14,
+   "sha256": "78f86adfaa6de0af20048dba9a19b58dd777fdbf9ea7c6520dad3b187a0a84e3",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/domains/recherche/2026-09-21_testprojekt/02_work/arbeit.md",
+   "@type": "File",
+   "name": "arbeit.md",
+   "contentSize": 12,
+   "sha256": "a9aba7b40d94a57a96cebb21e9892886c2bb1cf312563e798dae997d93e12a1e",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/domains/recherche/2026-09-21_fremd_bibliothek/.gitignore",
+   "@type": "File",
+   "name": ".gitignore",
+   "contentSize": 146,
+   "sha256": "e081b48275de0ae862c4a973f10b5c897ed2e24dd08d807bdaaea6f8e20004d7",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/domains/recherche/2026-09-21_fremd_bibliothek/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 87,
+   "sha256": "ee42a269ef48118c30789b873176237907b8b2ffcef21287335eb4bf7783da4b",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/standalone/2026-09-21_frisch/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 69,
+   "sha256": "f51b9f91ad8e11afb4074a3b42fb2521a3c977d99c27f6748ce2cd3f5a887752",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "20_PROJEKTE/standalone/2026-09-21_frisch/01_input/x.md",
+   "@type": "File",
+   "name": "x.md",
+   "contentSize": 2,
+   "sha256": "73cb3858a687a8494ca3323053016282f3dad39d42cf62ca4e79dda2aac7d9ac",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/.gitignore",
+   "@type": "File",
+   "name": ".gitignore",
+   "contentSize": 146,
+   "sha256": "e081b48275de0ae862c4a973f10b5c897ed2e24dd08d807bdaaea6f8e20004d7",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 764,
+   "sha256": "a56167360abeef875360665fa0e9bb491d686831a44b5e296308ff74d6ea6860",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/UEBERNAHME.md",
+   "@type": "File",
+   "name": "UEBERNAHME.md",
+   "contentSize": 970,
+   "sha256": "36ba57eb40ed9d92ff9f79b7c76c410bb1e5f8d69e4b94396fed101543674070",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/policies/rules.yaml",
+   "@type": "File",
+   "name": "rules.yaml",
+   "contentSize": 1703,
+   "sha256": "ebb8b321fef0b4ba24854b5a12518663542845c922f3e2bb169f8d5ef402908a",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/manifest/repos.yaml",
+   "@type": "File",
+   "name": "repos.yaml",
+   "contentSize": 3759,
+   "sha256": "6fd3ff83a34b78e183f80af08a12b2e9cb7d6ff82351efa386209308c71ce322",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/provenance/vorlage.yaml",
+   "@type": "File",
+   "name": "vorlage.yaml",
+   "contentSize": 445,
+   "sha256": "21436a92377364234be986d7244ae3970ae692adc8a20e6ccb70e250ead025e0",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/design/CHANGELOG_DESIGN.md",
+   "@type": "File",
+   "name": "CHANGELOG_DESIGN.md",
+   "contentSize": 11067,
+   "sha256": "eaffca679029c62bc93fb17a5f134f5f15ba623a9238ce3bb05176702a8326c4",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/design/LIESMICH.md",
+   "@type": "File",
+   "name": "LIESMICH.md",
+   "contentSize": 911,
+   "sha256": "394fb70c2ea8785dd2e6b66a4894dbb1cd3fc2413dfc0652b37fbf19b8a363bf",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/design/MASTER_DESIGN_v1.3.md",
+   "@type": "File",
+   "name": "MASTER_DESIGN_v1.3.md",
+   "contentSize": 37795,
+   "sha256": "32c0e967c1a0f8bc653ee4a19c0d6dfa5742b56610c33a64092cadec50ba4cf8",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/design/RED_TEAM_v1.1.md",
+   "@type": "File",
+   "name": "RED_TEAM_v1.1.md",
+   "contentSize": 4511,
+   "sha256": "ff0b20a34fcd5fc29478742da2773ffbe3dbf19a651dd6648acac81a5175517f",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/design/RED_TEAM_v1.3.md",
+   "@type": "File",
+   "name": "RED_TEAM_v1.3.md",
+   "contentSize": 3704,
+   "sha256": "f9377865df598317e29769330f00f27a3007d25fd74427ce53cafd4d968fbfe7",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "00_SYSTEM/schemas/repos.schema.json",
+   "@type": "File",
+   "name": "repos.schema.json",
+   "contentSize": 1778,
+   "sha256": "38769b1e305da28573d96c514f309c25b3af9cf211c04b112f0b3136f7cd2a0c",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "80_VORLAGEN/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 31,
+   "sha256": "59be968c656a834cb5908ecd6a6858c6e9555a3c3a20e2e45c2b4d628583fa90",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "80_VORLAGEN/vorlagen.json",
+   "@type": "File",
+   "name": "vorlagen.json",
+   "contentSize": 580,
+   "sha256": "581de82a3fd5159fdb6588a8ffaa96e9de3dbee7d7fdf61d33bbc23ed1fb8089",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "50_INFRA/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 62,
+   "sha256": "5fc3e8b175a675db659df2539c751f1f3916221fab7362212c54ff6cf8932014",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "50_INFRA/RECHERCHE_AEHNLICHE_PROJEKTE.md",
+   "@type": "File",
+   "name": "RECHERCHE_AEHNLICHE_PROJEKTE.md",
+   "contentSize": 7173,
+   "sha256": "e27f38d1d4910b420476cf64f174d3018c3b6e918399d32022d1db1a2d650232",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "50_INFRA/RECOLL_ANLEITUNG.md",
+   "@type": "File",
+   "name": "RECOLL_ANLEITUNG.md",
+   "contentSize": 1738,
+   "sha256": "01ff377eb210372a579b1bf1610ad271a785a32e3d03ca0631d282c74a494cfb",
+   "dateModified": "2026-09-27T13:54:57+0200"
+  },
+  {
+   "@id": "50_INFRA/redundanz.yaml",
+   "@type": "File",
+   "name": "redundanz.yaml",
+   "contentSize": 817,
+   "sha256": "c3e62038731face73963ab4a8bf05cc9616a3f48d254de2784ffca02faed5691",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "50_INFRA/rollentrennung.yaml",
+   "@type": "File",
+   "name": "rollentrennung.yaml",
+   "contentSize": 385,
+   "sha256": "2ea1e8ad0c1e3dcabc78704d1263a1f6a3709d41290fb395579403187ae60aad",
+   "dateModified": "2026-09-27T13:54:57+0200"
+  },
+  {
+   "@id": "50_INFRA/nodes/knoten-01.yaml",
+   "@type": "File",
+   "name": "knoten-01.yaml",
+   "contentSize": 72,
+   "sha256": "6ccf30bc6bd751f46c5de9e83a13904580e1f69883fa0bf8a744bbcdf2602837",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/.gitignore",
+   "@type": "File",
+   "name": ".gitignore",
+   "contentSize": 39,
+   "sha256": "3ec480fd9ffaafa83bcf37089e43ae4b26a84fcf986a4bde8c790a241701b4d0",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 173,
+   "sha256": "8510dbdb19bc29c1e16efebeb8647930668ffcfdb202276e7c81f70861d50c71",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/projects/katalog_bereinigen.py",
+   "@type": "File",
+   "name": "katalog_bereinigen.py",
+   "contentSize": 2418,
+   "sha256": "6d5001834d30fd7602e99967ec9c8a137bde5f949ce48856a0a7bf1e100ef238",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/projects/neues_projekt.py",
+   "@type": "File",
+   "name": "neues_projekt.py",
+   "contentSize": 5363,
+   "sha256": "57528b07b0d897262611d4403567be5714b8c610a992cf7d847f86e4e79b066c",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/projects/vorlage_anwenden.py",
+   "@type": "File",
+   "name": "vorlage_anwenden.py",
+   "contentSize": 1995,
+   "sha256": "ba49b8ea4c7c00f4710bfdbccd22caecde7caf1d35e9025074e01efa297830d9",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/bagit/bagit_bauen.py",
+   "@type": "File",
+   "name": "bagit_bauen.py",
+   "contentSize": 6352,
+   "sha256": "c6f189e5629049fc167a56e087704dbca99a9f2ea7f1f3db954e88345047cf1f",
+   "dateModified": "2026-09-27T13:54:57+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/crate/liste_aus_crate.py",
+   "@type": "File",
+   "name": "liste_aus_crate.py",
+   "contentSize": 2449,
+   "sha256": "5f06ee235bc3f7035c4ff72cd600ae70731c4a0c7def8c1a0d8b99db7db87c7f",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/crate/ro_crate.py",
+   "@type": "File",
+   "name": "ro_crate.py",
+   "contentSize": 8042,
+   "sha256": "17583fc077c7f0c164dbc2b2e136925309601fd778142525d04332dd7db2c758",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/indexing/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 1388,
+   "sha256": "eab11266b00ddb0cea08a2d845fa390c31f67925b3e17e24dd67820ad90e7289",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/indexing/indexer.py",
+   "@type": "File",
+   "name": "indexer.py",
+   "contentSize": 35331,
+   "sha256": "3c7edf38ae0f5a441c47d33b2db7b35d4f94f25e180deca256ee6a03f0108df8",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/cross-repo/adapter_readonly.py",
+   "@type": "File",
+   "name": "adapter_readonly.py",
+   "contentSize": 9841,
+   "sha256": "a77df8599c78fe8e7ab73eaf74ff0c9737c4fb5eed9169b598e9a47f9ed0f12a",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/validation/README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": 1142,
+   "sha256": "5a03ce18cfb5952176112aa9f546f03f89b517d352229fa51a95e226a5453c7b",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/validation/REVIEW.md",
+   "@type": "File",
+   "name": "REVIEW.md",
+   "contentSize": 2543,
+   "sha256": "53a913adc656b43257e9747be16fa589cf2836f9becfc25e4154da4fff92ed07",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/validation/budget.py",
+   "@type": "File",
+   "name": "budget.py",
+   "contentSize": 3723,
+   "sha256": "656804c24dd09b4f82a18acebc6bb694cb7d3abb412f1542a6fee60e63247691",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/validation/check_all.py",
+   "@type": "File",
+   "name": "check_all.py",
+   "contentSize": 32221,
+   "sha256": "9d2b7cdc6527eaad19872830a64163b72f7b6f2a4160eeffa9f5e03ff7b24683",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/validation/formate_pruefen.py",
+   "@type": "File",
+   "name": "formate_pruefen.py",
+   "contentSize": 2541,
+   "sha256": "e64d702a6d915f3e4aad2c34b4dad0ad3046b3d9a9d5ca5873ac6ac5833019ef",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/validation/rollentrennung_messen.py",
+   "@type": "File",
+   "name": "rollentrennung_messen.py",
+   "contentSize": 5156,
+   "sha256": "df090a416efa742e6e7867a801a10bff180d832bda1aca3f1c75ba56643dab9a",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/validation/rules.py",
+   "@type": "File",
+   "name": "rules.py",
+   "contentSize": 84118,
+   "sha256": "330c627d85b10aefcca67a8a1b18c3ed096e4ddc9549f169b8dfabf6744238ce",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/validation/schema_check.py",
+   "@type": "File",
+   "name": "schema_check.py",
+   "contentSize": 3554,
+   "sha256": "fa8cb7504d8c5f11d9a58ac42a0e0b9f24ab13b2c62f66b24ffbae93b23c8c73",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/maintenance/status_sim.py",
+   "@type": "File",
+   "name": "status_sim.py",
+   "contentSize": 32352,
+   "sha256": "b64d70316946b4447a40f0926c1e23fda4b0cfa76ec90322bd05315a948503fa",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/ABSCHLUSSBERICHT.md",
+   "@type": "File",
+   "name": "ABSCHLUSSBERICHT.md",
+   "contentSize": 3165,
+   "sha256": "d18f1f8cd60534c00db27c5e878df97f780a6910bb06f5541defb66b6160d602",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/ABSCHLUSSBERICHT_AUSBAU.md",
+   "@type": "File",
+   "name": "ABSCHLUSSBERICHT_AUSBAU.md",
+   "contentSize": 6395,
+   "sha256": "bcb0bd8a3e960dc6703ddaa97de3ae68407c6f5471b30cbab3a2bcd264b3cc16",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/BAUPLAN_AUSBAU.md",
+   "@type": "File",
+   "name": "BAUPLAN_AUSBAU.md",
+   "contentSize": 9014,
+   "sha256": "73537199d021d83a25d5eef47eefff41acddb3293cf12f0e1da594a7a8a7e777",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/BAUPLAN_WEG1.md",
+   "@type": "File",
+   "name": "BAUPLAN_WEG1.md",
+   "contentSize": 3939,
+   "sha256": "8a44c9b92d02b4fc682167821e6056c1885a6c9463beb11a036c31eab506d3f0",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/BEFUNDE_FREMDPruefung_2026-09-25.md",
+   "@type": "File",
+   "name": "BEFUNDE_FREMDPruefung_2026-09-25.md",
+   "contentSize": 14520,
+   "sha256": "57a0c9d11ef3ce992de80aede06b8f4e0c481a039aea055d5b942f0784a516e4",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/ETAPPE2_BERICHT.md",
+   "@type": "File",
+   "name": "ETAPPE2_BERICHT.md",
+   "contentSize": 12608,
+   "sha256": "04f11915224b7a72e149a5b1229fceeeb267bb5e8ad5f3682af5162808fb5f75",
+   "dateModified": "2026-09-27T13:54:57+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/FORTSCHRITT.md",
+   "@type": "File",
+   "name": "FORTSCHRITT.md",
+   "contentSize": 27614,
+   "sha256": "12363c87457ef36a9f955183546b649caf00ce80fb8928c926549855894b4ec8",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/METADATEN_SCHICHTEN.md",
+   "@type": "File",
+   "name": "METADATEN_SCHICHTEN.md",
+   "contentSize": 2599,
+   "sha256": "edc6a2227590db13a4803f5032e0797bcda8cad8689b82dbf27af909839f83b7",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/RECHERCHE_VERBESSERUNGEN_2026-09-24.md",
+   "@type": "File",
+   "name": "RECHERCHE_VERBESSERUNGEN_2026-09-24.md",
+   "contentSize": 5134,
+   "sha256": "68c21be341957f9a94bf30995ebed81f469a16f3b13dfdc82cfa13574fff8b0e",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/reports/UEBERSICHT.html",
+   "@type": "File",
+   "name": "UEBERSICHT.html",
+   "contentSize": 13320,
+   "sha256": "8886837be01d5c28c8e9fecd4e027e40cf3e64af6086c06d4cbe001c0d4d1a65",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/pointers/doppelte.py",
+   "@type": "File",
+   "name": "doppelte.py",
+   "contentSize": 9140,
+   "sha256": "c8afd2d9f854a67038b44bcbf58def0ed6f5c051b94e1ab31b09b7f581a2cfb2",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/pointers/finden.py",
+   "@type": "File",
+   "name": "finden.py",
+   "contentSize": 10640,
+   "sha256": "bfd63758a46277b20fcd6d648e77441429c77e6ea257ec507bfaabd8c920550f",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/pointers/suchen_namen.py",
+   "@type": "File",
+   "name": "suchen_namen.py",
+   "contentSize": 7709,
+   "sha256": "9c98588be2896adb720ec7d941c0fcbaa325fad0320640235b8bb4264e045445",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/pointers/zeiger_bauen.py",
+   "@type": "File",
+   "name": "zeiger_bauen.py",
+   "contentSize": 4712,
+   "sha256": "519e70eb0cf1db1082495df740bf9f182161e70ae33aaea4527ba39150fc0023",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/REF_ZERO",
+   "@type": "File",
+   "name": "REF_ZERO",
+   "contentSize": 101,
+   "sha256": "e3e84143ae36348bd40a647c65c4ee217022c36c15548bb945bc17969bd05c57",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/alle_suiten.sh",
+   "@type": "File",
+   "name": "alle_suiten.sh",
+   "contentSize": 2842,
+   "sha256": "b46eafd7dcf8bb8b3b3da1243524848faefc0050cab71a6bd176b5366067fbf5",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/braucht_originalbaum.txt",
+   "@type": "File",
+   "name": "braucht_originalbaum.txt",
+   "contentSize": 501,
+   "sha256": "e54a30f67f3159a9c8a3f4fc3ac4386723168e5da4ba927b307791ae0f5488c0",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/lastgrenzen.py",
+   "@type": "File",
+   "name": "lastgrenzen.py",
+   "contentSize": 4599,
+   "sha256": "6b301ec8d3cd910c79684ae93e3c997957fd14d56262432c5f0d877ea9feae8f",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/make_fixtures.py",
+   "@type": "File",
+   "name": "make_fixtures.py",
+   "contentSize": 5760,
+   "sha256": "e37ca6e8d709ca7826891d22bfa985dcda69a890cf59ee9f381b07cdb628635c",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/redteam.py",
+   "@type": "File",
+   "name": "redteam.py",
+   "contentSize": 15427,
+   "sha256": "19b81a84d3a1ad1461a681980e311dbeb012975454435916126900e52e8d4804",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/run_tests.sh",
+   "@type": "File",
+   "name": "run_tests.sh",
+   "contentSize": 145,
+   "sha256": "2a901d2ba67591ca45a562ce0d2ebbbc7e03d5d170679df371e2b72a86451385",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/sicherheitstest.py",
+   "@type": "File",
+   "name": "sicherheitstest.py",
+   "contentSize": 11765,
+   "sha256": "df7270593620418e4744ad46832d82c5d75520b5f2460cc6276baff8973af582",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/skala.py",
+   "@type": "File",
+   "name": "skala.py",
+   "contentSize": 7751,
+   "sha256": "81157cf8851aa1d6ca8b16e8965e197ad19a12e59fbfe089a7f81e7ae67d4d95",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe29.py",
+   "@type": "File",
+   "name": "test_suite_etappe29.py",
+   "contentSize": 11676,
+   "sha256": "51d92c910848a29b48c7e820a084aaf202f44fabdeabd884c89696f1db6ab551",
+   "dateModified": "2026-09-27T13:54:57+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe30.py",
+   "@type": "File",
+   "name": "test_suite_etappe30.py",
+   "contentSize": 5203,
+   "sha256": "a52cb06432fff81ba8e8096a0713753c19c57ab00e066fad9a68cb9d75a7611a",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe31.py",
+   "@type": "File",
+   "name": "test_suite_etappe31.py",
+   "contentSize": 3938,
+   "sha256": "394032c00b307d3380328a213be12a588f22e234fb7c251120d746e7433a289b",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe32.py",
+   "@type": "File",
+   "name": "test_suite_etappe32.py",
+   "contentSize": 5354,
+   "sha256": "345f7d6f45f3760ccbf1131c4f3570dc5e23b2eca80d2b2765bca47590c68a06",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe33.py",
+   "@type": "File",
+   "name": "test_suite_etappe33.py",
+   "contentSize": 5706,
+   "sha256": "5102d9696eff8ea9d0efffeaa172f23c6777b10f11946d97747e502a7b80c638",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe34.py",
+   "@type": "File",
+   "name": "test_suite_etappe34.py",
+   "contentSize": 4645,
+   "sha256": "7545da0a53bfa41aa9e21c76e7b4202dc93b2ab4a0aec1da18b254cf2ac17c87",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe35.py",
+   "@type": "File",
+   "name": "test_suite_etappe35.py",
+   "contentSize": 4913,
+   "sha256": "104550edcb43cfe05125c0b23e9250937925ec9050e0d9214deb4de322a1f3c8",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe36.py",
+   "@type": "File",
+   "name": "test_suite_etappe36.py",
+   "contentSize": 6670,
+   "sha256": "60823ad79b57cfdfb6d122508f3f0a8e02db3c6151163195f15d07e59e790a67",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe37.py",
+   "@type": "File",
+   "name": "test_suite_etappe37.py",
+   "contentSize": 3178,
+   "sha256": "c3db0cfe7ef2de3675b70c9a035afeaf003bd04b23b4bd0dd20a64cd5a1063c7",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe38.py",
+   "@type": "File",
+   "name": "test_suite_etappe38.py",
+   "contentSize": 2790,
+   "sha256": "af19ff54740e3cfce947bcfd6b0067737664c4d851ca541449e24af701317de9",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe39.py",
+   "@type": "File",
+   "name": "test_suite_etappe39.py",
+   "contentSize": 2959,
+   "sha256": "7c17161b2c8ff4598e01a64b6d8b75d650763cf2c03d11da8f9d1a6864d94a0a",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/ausbau/test_suite_etappe40.py",
+   "@type": "File",
+   "name": "test_suite_etappe40.py",
+   "contentSize": 8812,
+   "sha256": "1ac75f8fade1e584b9ac0d03048c9a311ec0b23e49d9d75ee7deb76d1985bc87",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/weg1/test_suite.py",
+   "@type": "File",
+   "name": "test_suite.py",
+   "contentSize": 19219,
+   "sha256": "f80181d51b8a55f82bbcc508e8a079ac31ddedcab0dd2caf3558544ad24da2f1",
+   "dateModified": "2026-09-27T13:54:57+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/weg1/test_suite_etappe2.py",
+   "@type": "File",
+   "name": "test_suite_etappe2.py",
+   "contentSize": 15378,
+   "sha256": "5ce02027a1a1411086903aab60ffccf818fe20dabfb7f404f3c0dd717d832bd6",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/weg1/test_suite_etappe25.py",
+   "@type": "File",
+   "name": "test_suite_etappe25.py",
+   "contentSize": 14785,
+   "sha256": "399767381d32def2f6151b4b1ea135d67d8e2dc3adb3d2f59a8e05f3bee134b6",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/weg1/test_suite_etappe26.py",
+   "@type": "File",
+   "name": "test_suite_etappe26.py",
+   "contentSize": 15415,
+   "sha256": "3ce4b9cf839ec32c5997b7bc11cb1bdf82dbe15baa355a076436341b1dce5671",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/weg1/test_suite_etappe28.py",
+   "@type": "File",
+   "name": "test_suite_etappe28.py",
+   "contentSize": 10013,
+   "sha256": "973793d79f51267405036676cfb15f7211b9f49e2b6a745958062fc80dd3edea",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/weg1/test_suite_finalabnahme.py",
+   "@type": "File",
+   "name": "test_suite_finalabnahme.py",
+   "contentSize": 9778,
+   "sha256": "20207c48f9aea8ef42d9f62a5cc14f44578a9ffcfc0993d533da41e8ee4728f1",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/weg1/test_suite_gegenprobe25.py",
+   "@type": "File",
+   "name": "test_suite_gegenprobe25.py",
+   "contentSize": 18310,
+   "sha256": "c98289b9fd4f6140b6d324e05d00a96f98202b51773cb1300ca3d07b7c4d6939",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  },
+  {
+   "@id": "70_AUTOMATION/tests/weg1/test_suite_unabhaengig.py",
+   "@type": "File",
+   "name": "test_suite_unabhaengig.py",
+   "contentSize": 15797,
+   "sha256": "c0049f6e2cdfcf0d6ca3d2c3208225fa66190ef9074569a4a39a83a6492ee98d",
+   "dateModified": "2026-09-27T13:29:47+0200"
+  }
+ ]
+}

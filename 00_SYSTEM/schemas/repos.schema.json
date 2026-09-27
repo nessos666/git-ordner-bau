@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "repos.yaml — Katalog der Git-Architektur v1.3",
+  "type": "object",
+  "required": ["schema_version", "repos"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "notfallkontakt": { "type": "string" },
+    "passphrase_ort":  { "type": "string" },
+    "repos": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["schema_version","name","class","status","owner","seit","bereich","pfad","git"],
+        "properties": {
+          "schema_version": { "type": "integer" },
+          "name":   { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+          "pfad":   { "type": "string", "pattern": "^(?!/)(?!.*\\.\\.)" },
+          "class":  { "enum": ["system","agent","project","knowledge","data","infra","automation","template","archive"] },
+          "bereich":{ "enum": ["00_SYSTEM","10_AGENT","20_PROJEKTE","30_WISSEN","40_DATEN","50_INFRA","60_RUNTIME","70_AUTOMATION","80_VORLAGEN","90_ARCHIV"] },
+          "status": { "enum": ["provisional","active","paused","done","abandoned","archived"] },
+          "owner":  { "type": "string", "minLength": 1 },
+          "seit":   { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "git":    { "type": "boolean" },
+          "extern": { "type": "boolean" },
+          "pin":    { "type": "string", "pattern": "^([0-9a-f]{40}|v?[0-9]+\\.[0-9]+.*)$" },
+          "remote": { "type": "string" }, "inhalt_ausgenommen": { "type": "boolean" },
+          "review_am": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "beschreibung": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

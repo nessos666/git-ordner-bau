@@ -1,0 +1,7 @@
+# 2.8: Laufzeit und Artefakte gehoeren nicht in die Versionierung
+60_RUNTIME/
+__pycache__/
+*.pyc
+.pytest_cache/
+tmp_*/
+*_cache/

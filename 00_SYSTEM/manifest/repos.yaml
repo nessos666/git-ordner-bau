@@ -1,0 +1,143 @@
+# Katalog = Absicht. Die Dateien sind die Wahrheit ueber die Existenz. (v1.3, Abschnitt 7)
+# PROTOTYPE — NOT PRODUCTION. Alle Eintraege sind synthetisch.
+schema_version: 1
+notfallkontakt: "Testperson (Prototyp) — nicht real"
+passphrase_ort: "Prototyp: keine Passphrase vorhanden"
+repos:
+  - schema_version: 1
+    name: system_meta
+    class: system
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 00_SYSTEM
+    pfad: 00_SYSTEM
+    git: false
+    remote: prototyp/system_meta
+    review_am: "2027-09-21"
+    beschreibung: "Meta-Repository (Regeln, Katalog, Schemas, Pruefregeln)"
+
+  - schema_version: 1
+    name: 2026-09-21_testprojekt
+    class: project
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 20_PROJEKTE
+    pfad: 20_PROJEKTE/domains/recherche/2026-09-21_testprojekt
+    git: false
+    remote: prototyp/testprojekt
+    review_am: "2027-09-21"
+    beschreibung: "Projekt, aktiv, im Domaenen-Buendel"
+
+  - schema_version: 1
+    name: 2026-09-21_frisch
+    class: project
+    status: provisional
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 20_PROJEKTE
+    pfad: 20_PROJEKTE/standalone/2026-09-21_frisch
+    git: false
+    beschreibung: "Projekt im Bootstrap-Zustand (provisional)"
+
+  - schema_version: 1
+    name: 2026-09-21_dossier
+    class: knowledge
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 30_WISSEN
+    pfad: 30_WISSEN/dossiers/2026-09-21_dossier
+    git: false
+    remote: prototyp/wissensbasis
+    review_am: "2026-12-21"
+    beschreibung: "Wissensartefakt mit Herkunftskopf"
+
+  - schema_version: 1
+    name: daten_zeiger
+    class: data
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 40_DATEN
+    pfad: 40_DATEN
+    git: false
+    review_am: "2027-09-21"
+    beschreibung: "Zeiger-, Katalog- und Manifest-Schicht (keine Daten)"
+
+  - schema_version: 1
+    name: infra_config
+    class: infra
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 50_INFRA
+    pfad: 50_INFRA
+    git: false
+    review_am: "2027-09-21"
+    beschreibung: "Konfigurations-Repo (getrennt vom Code)"
+
+  - schema_version: 1
+    name: knoten-01
+    class: infra
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 50_INFRA
+    pfad: 50_INFRA/nodes/knoten-01.yaml
+    git: false
+    review_am: "2027-09-21"
+    beschreibung: "Maschine als Datendatei (Node)"
+
+  - schema_version: 1
+    name: finetune_test
+    class: data
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 60_RUNTIME
+    pfad: 60_RUNTIME/artefakt/modell_test
+    git: false
+    review_am: "2027-09-21"
+    beschreibung: "ARTEFAKT: nicht neu erzeugbar in 1h, nicht loeschen, sichern"
+
+  - schema_version: 1
+    name: automatisierung
+    class: automation
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 70_AUTOMATION
+    pfad: 70_AUTOMATION
+    git: false
+    remote: prototyp/automation
+    review_am: "2027-09-21"
+    beschreibung: "Pruefer, Tests, Wartung"
+
+  - schema_version: 1
+    name: 2026_altprojekt
+    class: archive
+    status: archived
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 90_ARCHIV
+    pfad: 90_ARCHIV/2026_altprojekt
+    git: false
+    remote: prototyp/altprojekt
+    beschreibung: "Abgeschlossen, schreibgeschuetzt"
+
+  - schema_version: 1
+    name: fremd_bibliothek
+    class: data
+    status: active
+    owner: prototyp
+    seit: "2026-09-21"
+    bereich: 20_PROJEKTE
+    pfad: 20_PROJEKTE/domains/recherche/2026-09-21_fremd_bibliothek
+    git: false
+    extern: true
+    pin: e8d25ab47894b11abe9d950c5dfb5d79df804882
+    remote: fremd/bibliothek
+    review_am: "2027-09-21"
+    beschreibung: "FREMDE Abhaengigkeit -> Pin Pflicht (Testfall)"

@@ -1,0 +1,12 @@
+# Herkunftskopf — Vorlage (v1.3, Abschnitt 13)
+# Pflicht fuer Wissensartefakte mit Status != provisional (K3).
+kopf:
+  artefakt: 30_WISSEN/dossiers/2026-09-21_dossier/README.md
+  quelle_repo: test/wissensbasis
+  quelle_commit: "0000000000000000000000000000000000000000"
+  erzeuger: prototyp
+  modell: keins
+  eingaben: [00_SYSTEM/README.md]
+  workflow: prototyp-etappe-1
+  ausgabe_sha256: "{{SHA256}}"
+  zeitpunkt: "2026-09-21T20:00:00+02:00"

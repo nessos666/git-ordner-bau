@@ -1,0 +1,12 @@
+# Suiten, die den GEMESSENEN Originalbaum brauchen (Rollentrennung, Git-Historie, Fixtures daneben).
+# In einer Kopie oder in einem frisch angelegten Baum werden sie ÜBERSPRUNGEN — mit Begründung,
+# nicht als Fehler. Auftrag aus der Zweitprüfung 25.09.2026, Abnahmekriterium FORTSCHRITT.md.
+test_suite.py
+test_suite_etappe2.py
+test_suite_etappe25.py
+test_suite_etappe28.py
+test_suite_etappe37.py
+test_suite_finalabnahme.py
+test_suite_gegenprobe25.py
+test_suite_etappe29.py
+test_suite_etappe33.py
