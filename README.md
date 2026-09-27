@@ -162,4 +162,5 @@ Das eingefrorene Design, jede Abweichung mit Begründung und die Gegenprüfung l
 
 ## Lizenz
 
-Noch nicht festgelegt. Ohne Lizenzdatei darf der Code offiziell nicht weiterverwendet werden.
+[MIT](LICENSE) — der Code darf verwendet, verändert und weitergegeben werden, solange der
+Copyright-Hinweis erhalten bleibt. Er kommt ohne jede Gewährleistung.
